@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/dsh-memory-console"><img alt="npm" src="https://img.shields.io/npm/v/dsh-memory-console.svg" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
   <img alt="DSH" src="https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.2-4f8cff.svg" />
   <img alt="JavaScript" src="https://img.shields.io/badge/language-JavaScript-f7df1e.svg" />
@@ -116,7 +117,7 @@ compaction/end        { compactionId, turn: null }
 
 ### 安装
 
-**从 npm（推荐，发布后一行命令）：**
+**从 npm（推荐）：**
 
 ```bash
 dsh plugin --profile desktop add dsh-memory-console
@@ -144,7 +145,8 @@ node scripts/build-client.mjs   # 修改 src/client/*.js 后生成 client.js
 npm test                        # 10 项单元测试（无第三方依赖）
 ```
 
-需要额外验证时，可运行 `npm run test:harness`（依赖本机已安装的 DSH 与真实会话日志，普通用户不需要）。
+需要额外验证时，可运行 
+pm run test:harness`（依赖本机已安装的 DSH 与真实会话日志，普通用户不需要）。
 
 ---
 
