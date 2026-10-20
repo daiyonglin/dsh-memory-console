@@ -35,8 +35,9 @@
 ### 右侧栏「记忆」面板
 
 <p align="center">
-  <img src="assets/screenshots/panel.png" alt="记忆面板" width="460" />
+  <img src="assets/screenshots/panel.png" alt="记忆面板" width="420" />
 </p>
+<p align="center"><sub>右侧栏面板：构成环、上下文压力、增长曲线与建议队列</sub></p>
 
 - **任务阶段**：按真实的人类任务切分。系统注入、技能目录、编队/子代理通知会自动归组，不再是一堆看不懂的碎片；
 - **构成环**：系统提示 / 用户消息 / 助手消息 / 工具结果 / 注入通知 / 已收起 六类占比，悬停联动图例与说明；
@@ -51,21 +52,33 @@
 <p align="center">
   <img src="assets/screenshots/memory-center.png" alt="记忆中心" width="880" />
 </p>
+<p align="center"><sub>全屏记忆中心：左侧主会话列表，右侧同一套记忆控制台</sub></p>
 
 - 左侧：主会话列表（打开中的可直接管理，历史会话只读）；
 - 右侧：同一套记忆控制台，适合跨会话盘点；
 - 子代理/编队会话默认隐藏，避免一次团队任务刷出几十条。
 
-### 收起前先预览、收起后能恢复
+### 批量收起
 
 <p align="center">
-  <img src="assets/screenshots/confirm.png" alt="收起预览" width="420" />
-  &nbsp;&nbsp;
-  <img src="assets/screenshots/folded.png" alt="已收起" width="420" />
+  <img src="assets/screenshots/batch.png" alt="批量收起" width="420" />
 </p>
+<p align="center"><sub>勾选多个任务阶段，一次确认、逐段独立收起</sub></p>
 
-预览里会给出：**这一段多大、收起后模型看到什么摘要、省多少 token**。
-已收起的阶段在聊天里显示为官方的"上下文已压缩"折叠行，在面板里可以「查看摘要」和「恢复」。
+- 勾选后可看到「已选 N 段 · 合计 X tokens」；
+- 确认后每段各自写一次官方 compaction 事务，互不影响；
+- 每段都能单独恢复。
+
+### 收起之后：折叠行、摘要与恢复
+
+<p align="center">
+  <img src="assets/screenshots/fold-flow.png" alt="收起结果与摘要" width="420" />
+</p>
+<p align="center"><sub>收起后聊天里出现官方“上下文已压缩”折叠行；面板里可展开摘要、随时恢复原文</sub></p>
+
+- 收起前会预览：**这一段多大、模型将看到什么摘要、省多少 token**；
+- 收起后阶段标记为「已收起」，可查看摘要或一键恢复；
+- 原文始终保留在会话日志，恢复后上下文会重新变大。
 
 ---
 
