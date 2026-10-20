@@ -1,0 +1,65 @@
+{
+  "name": "dsh-memory-console",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Per-task context management for DeepSeek Harness: inspect token usage by task phase, then fold, remove, or restore a phase through the official compaction protocol.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "README.md",
+    "LICENSE",
+    "src/**",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daiyonglin/dsh-memory-console.git",
+    "directory": "plugin/memory-console"
+  },
+  "homepage": "https://github.com/daiyonglin/dsh-memory-console#readme",
+  "bugs": {
+    "url": "https://github.com/daiyonglin/dsh-memory-console/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "memory",
+    "context",
+    "compaction",
+    "agent"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:client": "node scripts/build-client.mjs",
+    "test": "node test/surgery.test.mjs",
+    "test:harness": "node test/harness-integration.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

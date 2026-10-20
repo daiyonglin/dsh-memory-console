@@ -1,0 +1,3 @@
+- insert:
+    - id: memory-console
+      name: dsh-memory-console

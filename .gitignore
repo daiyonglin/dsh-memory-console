@@ -1,0 +1,11 @@
+node_modules/
+plugin/*/node_modules/
+*.tgz
+.recovery/
+RWKV7.pdf
+RWKV7.txt
+research/
+.local/
+.DS_Store
+Thumbs.db
+*.log

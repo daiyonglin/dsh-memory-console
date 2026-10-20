@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Memory Console">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="55%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#bg)"/>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+
+  <!-- 三层记忆卡片：后两层更淡，表示被收起/衰减的历史 -->
+  <rect x="52" y="60" width="152" height="34" rx="12" fill="url(#card)" opacity="0.38"/>
+  <rect x="44" y="104" width="168" height="34" rx="12" fill="url(#card)" opacity="0.62"/>
+  <rect x="36" y="148" width="184" height="40" rx="14" fill="url(#card)"/>
+
+  <!-- 当前层的内容行 -->
+  <rect x="52" y="160" width="96" height="7" rx="3.5" fill="#2563eb" opacity="0.85"/>
+  <rect x="52" y="172" width="62" height="7" rx="3.5" fill="#0d9488" opacity="0.7"/>
+
+  <!-- 衰减曲线 + 收起检查点 -->
+  <path d="M44 128 C 74 112, 96 142, 126 126 S 170 104, 196 92" fill="none" stroke="url(#line)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="196" cy="92" r="9" fill="#34d399" stroke="#0f172a" stroke-opacity="0.25" stroke-width="3"/>
+  <circle cx="196" cy="92" r="3.5" fill="#0f172a" opacity="0.65"/>
+
+  <!-- 折叠角：表示“收起” -->
+  <path d="M188 36 L216 36 L216 64 Z" fill="#ffffff" opacity="0.9"/>
+  <path d="M188 36 L188 64 L216 64" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linejoin="round"/>
+</svg>
