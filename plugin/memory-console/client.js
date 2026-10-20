@@ -1,6 +1,6 @@
-// 记忆控制台 · Client bundle（由 scripts/build-client.mjs 生成，请勿手改）
+// Memory Console · Client bundle（由 scripts/build-client.mjs 生成，请勿手改）
 window.__ModuleLoader__.load({
-  id: 'memory-console',
+  id: "dsh-memory-console",
   factory(require) {
     const React = require('react')
     const h = React.createElement

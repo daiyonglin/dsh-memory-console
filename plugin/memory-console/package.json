@@ -1,6 +1,6 @@
 {
   "name": "dsh-memory-console",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "license": "MIT",
   "description": "Per-task context management for DeepSeek Harness: inspect token usage by task phase, then fold, remove, or restore a phase through the official compaction protocol.",
