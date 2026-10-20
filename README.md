@@ -10,11 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/dsh-memory-console"><img alt="npm" src="https://img.shields.io/npm/v/dsh-memory-console.svg" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
   <img alt="DSH" src="https://img.shields.io/badge/DeepSeek%20Harness-0.2.1--rc.2-4f8cff.svg" />
-  <img alt="JavaScript" src="https://img.shields.io/badge/language-JavaScript-f7df1e.svg" />
-  <img alt="No build needed" src="https://img.shields.io/badge/install-local%20bundle-22c55e.svg" />
 </p>
 
 ---
@@ -30,10 +27,6 @@
 
 大多数"记忆插件"解决的是"**存更多**"；Memory Console 解决的是"**管得住**"：
 把上下文切成可理解的**任务阶段**，让"收起 / 移出 / 恢复"变成一次可预览、可撤销、可审计的操作。
-
-> 与 [dsh-context](https://github.com/bowenliang123/dsh-context) 的分工：
-> dsh-context 回答"上下文里有什么"（可观测性）；Memory Console 回答"我该收哪段、收完会怎样"（可操作性）。
-> 两者可以同时安装、互不冲突。
 
 ---
 
@@ -191,7 +184,7 @@ plugin/memory-console/
 
 - Host 侧是标准 ESM 模块；
 - Client 侧浏览器不能相对 import，构建脚本把 `src/client/*.js` 顺序组装进 `__ModuleLoader__` 的 factory；
-- 面板数据走与 dsh-context 相同的 `POST /api/memory-console` HTTP 路由，不依赖 WebSocket RPC。
+- 面板数据走插件自己的 `POST /api/memory-console` HTTP 路由，不依赖 WebSocket RPC。
 
 ---
 
